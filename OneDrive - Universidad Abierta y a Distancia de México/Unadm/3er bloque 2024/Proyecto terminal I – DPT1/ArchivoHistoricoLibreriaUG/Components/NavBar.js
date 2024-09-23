@@ -20,7 +20,16 @@ const NavBar = () => {
             alt="UGTO Logo"
           />
         </a>
-
+        <a
+          href="https://libreriaug.ugto.mx/"
+          className="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img
+            src="/images/logo_libreria.png"
+            className="h-12"
+            alt="libreria Logo"
+          />
+        </a>
         <div className="flex md:order-2">
           <button
             onClick={() => setIsOpen(!isOpen)}

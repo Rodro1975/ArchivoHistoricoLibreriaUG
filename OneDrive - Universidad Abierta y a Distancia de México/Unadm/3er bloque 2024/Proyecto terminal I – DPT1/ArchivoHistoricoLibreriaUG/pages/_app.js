@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import "animate.css/animate.min.css";
-
+import "font-awesome/css/font-awesome.min.css"; // Asegúrate de que esta línea esté presente
+import { NextUIProvider } from "@nextui-org/react";
 function MyApp({ Component, pageProps }) {
   return (
     <>

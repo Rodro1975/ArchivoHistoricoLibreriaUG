@@ -16,49 +16,90 @@ export default function Login() {
         <title>Inicio de Sesión - Archivo Histórico Librería UG</title>
       </Head>
       <NavBar />
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900">
-        <div className="bg-white shadow-lg rounded-lg p-6 w-96">
-          <div className="flex justify-center mb-4">
-            <Image
-              src="/images/escudo-png.png"
-              alt="Logotipo Universidad de Guanajuato"
-              width={120}
-              height={120}
-            />
+
+      {/* Formulario Inicio de sesión */}
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="bg-gray-100 flex flex-col sm:py-12 md:w-full md:max-w-3xl rounded-lg shadow-lg">
+          <div className="p-10 xs:p-0 mx-auto w-full">
+            {/* Escudo y Título dentro del formulario */}
+            <div className="px-5 py-7 text-center">
+              <div className="flex justify-center mb-5">
+                <img
+                  src="/images/escudo-png.png"
+                  alt="Escudo"
+                  className="h-20"
+                />
+              </div>
+
+              <h1 className="font-black text-3xl mb-5 text-yellow-400">
+                Iniciar Sesión
+              </h1>
+
+              <form className="flex flex-col items-center">
+                {/* Campos con flex-col para alinear verticalmente */}
+                <label className="font-semibold text-sm text-blue-900 pb-1 block text-left w-full">
+                  Correo Electrónico
+                </label>
+                <input
+                  type="email"
+                  className="border border-blue-900 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full text-blue-900 focus:border-yellow-400 focus:ring-yellow-400 focus:ring-2 focus:outline-none" // Añadido text-blue-900
+                />
+
+                <label className="font-semibold text-sm text-blue-900 pb-1 block text-left w-full">
+                  Contraseña
+                </label>
+                <input
+                  type="password"
+                  className="border border-blue-900 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full text-blue-900 focus:border-yellow-400 focus:ring-yellow-400 focus:ring-2 focus:outline-none" // Añadido text-blue-900
+                />
+
+                <button
+                  type="submit"
+                  className="transition duration-200 bg-yellow-400 hover:bg-blue-900 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"
+                >
+                  <span className="inline-block mr-2">Iniciar Sesión</span>
+                </button>
+              </form>
+
+              <div className="text-center mt-4 text-sm">
+                <a href="#" className="text-blue-900 hover:text-gray-600">
+                  ¿Olvidaste tu contraseña?
+                </a>
+              </div>
+            </div>
+
+            {/* División o */}
+            <div className="text-center py-4">
+              <span className="text-blue-900">o</span>
+            </div>
+
+            {/* Botones de redes sociales en la misma línea */}
+            <div className="p-5 flex justify-between space-x-3">
+              <button className="transition duration-200 border border-gray-200 text-gray-900 w-full py-2.5 rounded-lg text-sm hover:bg-gray-100 hover:shadow-lg flex items-center justify-center">
+                <i className="fab fa-google mr-2 text-red-600"></i>{" "}
+                {/* Icono de Google */}
+                <span className="inline-block">Google</span>
+              </button>
+              <button className="transition duration-200 border border-gray-200 text-gray-900 w-full py-2.5 rounded-lg text-sm hover:bg-gray-100 hover:shadow-lg flex items-center justify-center">
+                <i className="fab fa-linkedin mr-2 text-blue-700"></i>{" "}
+                {/* Icono de LinkedIn */}
+                <span className="inline-block">LinkedIn</span>
+              </button>
+            </div>
+
+            {/* Enlace "No tienes cuenta" */}
+            <div className="py-5 text-center">
+              <span className="text-blue-900 text-sm">
+                ¿No tienes una cuenta?
+              </span>
+              <a
+                href="/register"
+                className="text-yellow-400 hover:text-blue-900 text-sm font-semibold"
+              >
+                Regístrate
+              </a>
+            </div>
           </div>
-          <h1 className="text-2xl font-semibold text-center mb-4">
-            Iniciar Sesión
-          </h1>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="mb-4">
-              <label htmlFor="email" className="block text-gray-700 mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                {...register("email", { required: true })}
-                placeholder="Ingrese su email"
-                className="w-full py-2 px-4 border rounded-md text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
-              />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="password" className="block text-gray-700 mb-2">
-                Contraseña
-              </label>
-              <input
-                type="password"
-                {...register("password", { required: true })}
-                placeholder="Ingrese su contraseña"
-                className="w-full py-2 px-4 border rounded-md text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full py-2 bg-yellow-500 text-white font-semibold rounded-md hover:bg-yellow-400 transition duration-200"
-            >
-              Iniciar sesión
-            </button>
-          </form>
         </div>
       </div>
     </>
