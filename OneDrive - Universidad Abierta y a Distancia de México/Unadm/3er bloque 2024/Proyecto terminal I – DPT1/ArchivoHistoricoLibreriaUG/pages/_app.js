@@ -1,3 +1,4 @@
+import "animate.css/animate.min.css";
 import "../styles/globals.css";
 import "animate.css/animate.min.css";
 import "font-awesome/css/font-awesome.min.css"; // Asegúrate de que esta línea esté presente

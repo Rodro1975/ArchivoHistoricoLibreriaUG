@@ -1,3 +1,4 @@
+import axios from "axios";
 import Head from "next/head";
 import { useForm } from "react-hook-form";
 import NavBar from "/components/NavBar";
@@ -9,8 +10,22 @@ export default function Register() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    console.log("Datos enviados:", data);
+    if (data.password !== data.confirmPassword) {
+      console.error("Las contraseñas no coinciden");
+      return;
+    }
+
+    try {
+      const { confirmPassword, ...userData } = data; // Eliminar confirmPassword antes de enviar
+      const response = await axios.post("/api/register", userData);
+      console.log(response.data.message);
+    } catch (error) {
+      console.error(
+        error.response ? error.response.data.message : error.message
+      );
+    }
   };
 
   const roles = ["Lector", "Administrador", "Editor", "Investigador"];
@@ -23,7 +38,7 @@ export default function Register() {
       <NavBar />
       <div className="flex items-center justify-center min-h-screen pt-16 pb-16">
         {" "}
-        {/* Agrega márgenes para el espacio */}
+        {/* formulario de registro */}
         <div className="bg-gray-100 flex flex-col sm:py-12 md:w-full md:max-w-4xl rounded-lg shadow-lg">
           <div className="p-10 xs:p-0 mx-auto w-full">
             <div className="px-5 py-7 text-center">
@@ -125,9 +140,6 @@ export default function Register() {
 
               {/* Selección de Rol */}
               <div className="mb-4 col-span-full">
-                <label className="block text-blue-900 mb-2">
-                  Selecciona un rol
-                </label>
                 <select
                   {...register("rol", {
                     required: "Este campo es obligatorio",
@@ -165,9 +177,11 @@ export default function Register() {
               {/* Contraseña */}
               <div>
                 <input
+                  {...register("password", {
+                    required: "Este campo es obligatorio",
+                  })} // Usar register aquí
                   type="password"
                   id="password"
-                  name="password"
                   required
                   className="border border-blue-900 rounded-lg px-3 py-2 text-sm text-blue-900 focus:border-yellow-400 focus:ring-yellow-400 focus:ring-2 focus:outline-none w-full"
                   placeholder="Ingresa su contraseña"
@@ -177,14 +191,17 @@ export default function Register() {
               {/* Confirmar Contraseña */}
               <div>
                 <input
+                  {...register("confirmPassword", {
+                    required: "Este campo es obligatorio",
+                  })} // Usar register aquí
                   type="password"
                   id="confirmPassword"
-                  name="confirmPassword"
                   required
                   className="border border-blue-900 rounded-lg px-3 py-2 text-sm text-blue-900 focus:border-yellow-400 focus:ring-yellow-400 focus:ring-2 focus:outline-none w-full"
                   placeholder="Confirma su contraseña"
                 />
               </div>
+
               {/* Botón de Registro */}
               <div className="col-span-full">
                 <button
