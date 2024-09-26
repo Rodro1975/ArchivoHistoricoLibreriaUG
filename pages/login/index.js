@@ -35,24 +35,36 @@ export default function Login() {
                 Iniciar Sesión
               </h1>
 
-              <form className="flex flex-col items-center">
+              <form className="flex flex-col items-center" autoComplete="on">
+                {" "}
+                {/* Atributo autocomplete en el formulario */}
                 {/* Campos con flex-col para alinear verticalmente */}
-                <label className="font-semibold text-sm text-blue-900 pb-1 block text-left w-full">
+                <label
+                  htmlFor="email"
+                  className="font-semibold text-sm text-blue-900 pb-1 block text-left w-full"
+                >
                   Correo Electrónico
                 </label>
                 <input
                   type="email"
-                  className="border border-blue-900 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full text-blue-900 focus:border-yellow-400 focus:ring-yellow-400 focus:ring-2 focus:outline-none" // Añadido text-blue-900
+                  id="email" // ID único para el correo electrónico
+                  name="email" // Nombre para el autocompletado
+                  autoComplete="email" // Atributo autocomplete agregado
+                  className="border border-blue-900 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full text-blue-900 focus:border-yellow-400 focus:ring-yellow-400 focus:ring-2 focus:outline-none"
                 />
-
-                <label className="font-semibold text-sm text-blue-900 pb-1 block text-left w-full">
+                <label
+                  htmlFor="password"
+                  className="font-semibold text-sm text-blue-900 pb-1 block text-left w-full"
+                >
                   Contraseña
                 </label>
                 <input
                   type="password"
-                  className="border border-blue-900 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full text-blue-900 focus:border-yellow-400 focus:ring-yellow-400 focus:ring-2 focus:outline-none" // Añadido text-blue-900
+                  id="password" // ID único para la contraseña
+                  name="password" // Nombre para el autocompletado
+                  autoComplete="current-password" // Atributo autocomplete agregado
+                  className="border border-blue-900 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full text-blue-900 focus:border-yellow-400 focus:ring-yellow-400 focus:ring-2 focus:outline-none"
                 />
-
                 <button
                   type="submit"
                   className="transition duration-200 bg-yellow-400 hover:bg-blue-900 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"

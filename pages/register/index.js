@@ -60,6 +60,7 @@ export default function Register() {
               {/* Campos de Nombre */}
               <div className="mb-4">
                 <input
+                  id="primerNombre" // ID único agregado
                   {...register("primerNombre", {
                     required: "Este campo es obligatorio",
                   })}
@@ -75,6 +76,7 @@ export default function Register() {
 
               <div className="mb-4">
                 <input
+                  id="segundoNombre" // ID único agregado
                   {...register("segundoNombre")}
                   placeholder="Segundo Nombre (opcional)"
                   className="border border-blue-900 rounded-lg px-3 py-2 text-sm text-blue-900 focus:border-yellow-400 focus:ring-yellow-400 focus:ring-2 focus:outline-none w-full"
@@ -83,6 +85,7 @@ export default function Register() {
 
               <div className="mb-4">
                 <input
+                  id="apellidoPaterno" // ID único agregado
                   {...register("apellidoPaterno", {
                     required: "Este campo es obligatorio",
                   })}
@@ -98,6 +101,7 @@ export default function Register() {
 
               <div className="mb-4">
                 <input
+                  id="apellidoMaterno" // ID único agregado
                   {...register("apellidoMaterno", {
                     required: "Este campo es obligatorio",
                   })}
@@ -114,6 +118,7 @@ export default function Register() {
               {/* Campo de Correo y Teléfono */}
               <div className="mb-4">
                 <input
+                  id="correo" // ID único agregado
                   {...register("correo", {
                     required: "Este campo es obligatorio",
                     pattern: {
@@ -132,6 +137,7 @@ export default function Register() {
 
               <div className="mb-4">
                 <input
+                  id="telefono" // ID único agregado
                   {...register("telefono")}
                   placeholder="Teléfono (opcional)"
                   className="border border-blue-900 rounded-lg px-3 py-2 text-sm text-blue-900 focus:border-yellow-400 focus:ring-yellow-400 focus:ring-2 focus:outline-none w-full"
@@ -141,6 +147,7 @@ export default function Register() {
               {/* Selección de Rol */}
               <div className="mb-4 col-span-full">
                 <select
+                  id="rol" // ID único agregado
                   {...register("rol", {
                     required: "Este campo es obligatorio",
                   })}
@@ -161,6 +168,7 @@ export default function Register() {
               {/* Justificación */}
               <div className="mb-4 col-span-full">
                 <textarea
+                  id="justificacion" // ID único agregado
                   {...register("justificacion", {
                     required: "Este campo es obligatorio",
                   })}
@@ -174,6 +182,7 @@ export default function Register() {
                   </span>
                 )}
               </div>
+
               {/* Contraseña */}
               <div>
                 <input
@@ -181,7 +190,7 @@ export default function Register() {
                     required: "Este campo es obligatorio",
                   })} // Usar register aquí
                   type="password"
-                  id="password"
+                  id="password" // ID único agregado
                   required
                   className="border border-blue-900 rounded-lg px-3 py-2 text-sm text-blue-900 focus:border-yellow-400 focus:ring-yellow-400 focus:ring-2 focus:outline-none w-full"
                   placeholder="Ingresa su contraseña"
@@ -195,7 +204,7 @@ export default function Register() {
                     required: "Este campo es obligatorio",
                   })} // Usar register aquí
                   type="password"
-                  id="confirmPassword"
+                  id="confirmPassword" // ID único agregado
                   required
                   className="border border-blue-900 rounded-lg px-3 py-2 text-sm text-blue-900 focus:border-yellow-400 focus:ring-yellow-400 focus:ring-2 focus:outline-none w-full"
                   placeholder="Confirma su contraseña"
