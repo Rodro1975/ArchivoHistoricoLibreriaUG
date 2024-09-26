@@ -34,3 +34,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignorar archivos de configuración de usuario de Windows
+desktop.ini
+ntuser.dat
+ntuser.ini
+
+# Ignorar archivos de sistema
+*.log
