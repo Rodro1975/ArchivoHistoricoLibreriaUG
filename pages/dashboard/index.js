@@ -1,10 +1,11 @@
 // /pages/dashboard/index.js
-import Sidebar from "/components/Sidebar";
-import Header from "/components/Header";
+
 import { useAuth } from "../../hooks/useAuth";
-import AdminPanel from "../../components/AdminPanel"; // Importa AdminPanel
-import EditorPanel from "../../components/EditorPanel"; // Importa EditorPanel
-import ResearcherPanel from "../../components/ResearcherPanel"; // Importa ResearcherPanel
+import AdminPanel from "../../components/AdminPanel";
+import EditorPanel from "../../components/EditorPanel";
+import ResearcherPanel from "../../components/ResearcherPanel";
+import Header from "../../components/Header";
+import Sidebar from "../../components/Sidebar";
 
 const Dashboard = () => {
   const { user } = useAuth();
