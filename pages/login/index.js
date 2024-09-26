@@ -60,7 +60,7 @@ export default function Login() {
                 </label>
                 <input
                   type="password"
-                  id="password" // ID único para la contraseña
+                  id="login-password" // ID único para la contraseña
                   name="password" // Nombre para el autocompletado
                   autoComplete="current-password" // Atributo autocomplete agregado
                   className="border border-blue-900 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full text-blue-900 focus:border-yellow-400 focus:ring-yellow-400 focus:ring-2 focus:outline-none"

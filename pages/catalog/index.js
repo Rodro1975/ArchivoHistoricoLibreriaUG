@@ -1,5 +1,5 @@
 import Head from "next/head";
-import NavBar from "/components/NavBar"; // Cambia aquí también
+import NavBar from "../components/NavBar";
 import { useState, useEffect } from "react";
 
 export default function Catalogo() {
