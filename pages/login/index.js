@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
-import NavBar from "/components/NavBar";
+import NavBar from "components/NavBar";
 
 export default function Login() {
   const { register, handleSubmit } = useForm();

@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import NavBar from "/components/NavBar";
+import NavBar from "components/NavBar";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);

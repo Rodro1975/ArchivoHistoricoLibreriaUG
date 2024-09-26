@@ -1,7 +1,7 @@
 import axios from "axios";
 import Head from "next/head";
 import { useForm } from "react-hook-form";
-import NavBar from "/components/NavBar";
+import NavBar from "components/NavBar";
 
 export default function Register() {
   const {
