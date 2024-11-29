@@ -1,5 +1,8 @@
 .next/
 node_modules/
 .vercel
+<<<<<<< HEAD
 .env
 
+=======
+>>>>>>> d21be07ebf79133e92be10fd060a7e0bbe53bc11
