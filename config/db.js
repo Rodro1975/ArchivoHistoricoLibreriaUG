@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // config/db.js
 import { createClient } from "@supabase/supabase-js";
 
@@ -18,3 +19,16 @@ if (process.env.NODE_ENV === "development") {
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export default supabase;
+=======
+import { createPool } from "mysql2/promise";
+
+const pool = createPool({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "db_archivoHistorico",
+});
+
+// Exportamos el pool directamente
+export default pool;
+>>>>>>> d21be07ebf79133e92be10fd060a7e0bbe53bc11

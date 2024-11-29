@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Novecento+Wide&family=Raleway:wght@400&display=swap");
 @import "@fortawesome/fontawesome-free/css/all.min.css";
+<<<<<<< HEAD
 
+=======
+>>>>>>> d21be07ebf79133e92be10fd060a7e0bbe53bc11
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,6 +12,7 @@
   --color-blue: #003c71; /* Pantone 540c */
   --color-yellow: #f6e70f; /* Pantone 121c */
   --color-gold: #e3d8b0; /* Pantone 451c */
+<<<<<<< HEAD
   --color-gray: #e5e7eb; /* gray-200 */
   --color-orange: #ffa500; /* orange  #ffa500*/
   --color-navy: #1f2937; /* gray-900 */
@@ -19,6 +23,15 @@ body {
   background-color: var(--color-blue);
   color: white;
   margin: 0;
+=======
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: var(--color-blue);
+  color: white; /* Color del texto */
+>>>>>>> d21be07ebf79133e92be10fd060a7e0bbe53bc11
 }
 
 h1,
@@ -34,12 +47,16 @@ h3 {
   display: block;
 }
 
+<<<<<<< HEAD
 /* Clases de color personalizadas utilizando las variables CSS */
 .text-blue {
   color: var(--color-blue);
 }
 
 .text-yellow {
+=======
+.text-yellow-500 {
+>>>>>>> d21be07ebf79133e92be10fd060a7e0bbe53bc11
   color: var(--color-yellow);
 }
 
@@ -50,6 +67,7 @@ h3 {
 .text-center {
   text-align: center;
 }
+<<<<<<< HEAD
 
 /* Estilos adicionales para mejorar la presentación */
 .bg-blue {
@@ -159,3 +177,5 @@ h3 {
   background-color: blue; /* Fondo azul al hacer hover */
   color: yellow; /* Flecha amarilla al hacer hover */
 }
+=======
+>>>>>>> d21be07ebf79133e92be10fd060a7e0bbe53bc11

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "archivo-historico",
   "version": "0.1.0",
   "type": "module",
@@ -19,10 +20,30 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@nextui-org/react": "^2.4.8",
     "@supabase/supabase-js": "^2.46.2",
+=======
+  "name": "archivohistoricolibreriaug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "@nextui-org/react": "^2.4.8",
+>>>>>>> d21be07ebf79133e92be10fd060a7e0bbe53bc11
     "animate.css": "^4.1.1",
     "axios": "^1.7.7",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
+<<<<<<< HEAD
     "embla-carousel-react": "^8.3.0",
     "font-awesome": "^4.7.0",
     "framer-motion": "^11.11.8",
@@ -44,5 +65,19 @@
     "eslint-config-next": "14.2.13",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13"
+=======
+    "font-awesome": "^4.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.3",
+    "next": "^14.2.13",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.12"
+>>>>>>> d21be07ebf79133e92be10fd060a7e0bbe53bc11
   }
 }
